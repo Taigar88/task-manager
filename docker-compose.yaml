@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  postgres:
+    image: 'postgres:11.9-alpine'
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5432:5432'
+    volumes:
+      - /opt/h2-data
